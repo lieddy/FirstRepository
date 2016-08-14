@@ -14,6 +14,7 @@
     <ProjectGuid>{02F04C79-5DCC-4B17-B704-7ABBB1137E75}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>client</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -26,7 +27,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -80,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\common\data.h" />
+    <ClInclude Include="exception.h" />
     <ClInclude Include="LogReader.h" />
     <ClInclude Include="LogSender.h" />
     <ClInclude Include="stdafx.h" />

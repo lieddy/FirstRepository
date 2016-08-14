@@ -1,5 +1,5 @@
 #pragma once
-#include "data.h"
+#include "../common/data.h"
 #include <list>
 using namespace std;
 class LogReader
@@ -7,8 +7,8 @@ class LogReader
 public:
 	LogReader(void);
 	~LogReader(void);
-	list<MatchedLogRec> readLogs();
-protected:
+	list<MatchedLogRec>& readLogs();
+private:
 	void backUp();
 	void readFailedLogins();
 	void readBackUpFile();
@@ -16,9 +16,10 @@ protected:
 	void saveFailLogins();
 private:
 	char logFileName[50];
-	char backFileName[50];
+	char backFileName[100];
 	char failLoginsFileName[50];
 	list<LogRec> logins;
-	list<MatchedLogRec> logouts;
+	list<LogRec> logouts;
+	list<MatchedLogRec> readlog;
 };
 
